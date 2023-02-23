@@ -34,7 +34,7 @@ const InterpolationSelect = ({ currentValue, values, onChange }) => (
 
 
 const InterpolationGraph = ({data, title}) => {
-
+    //console.log(title, data);
     const [ interpolation, setIntepolation ] = useState("linear");
     const [polar, setpolar] = useState(false);
 
@@ -53,8 +53,8 @@ const InterpolationGraph = ({data, title}) => {
     }
       
     return ( 
-        <div className="h-full flex flex-col justify-between">
-            <div className="relative py-4 px-6 border-4 border-orange shadow-card">
+        <div className="h-full box-border relative flex flex-col justify-between">
+            <div className="relative h-full py-4 px-6 border-4 border-orange shadow-card">
                 <InterpolationSelect
                     currentValue={interpolation}
                     values={polar ? polarInterpolations : cartesianInterpolations }
