@@ -1,1 +1,1 @@
-﻿# fair-burn
+﻿# fair-app
