@@ -13,17 +13,17 @@ function App() {
   const [distributedStargaze, setDistributedStargaze ] = useState(null);
   //console.log("burn",burnedStargaze, burnedStargaze[0][1], new Date(burnedStargaze[0][0]));
   //console.log("distr",distributedStargaze);
-  console.log("burned",burnedStargaze);
+  //console.log("burned",burnedStargaze);
   useEffect(()=>{
     const getData = async() =>{
       
-      const burnData = await axios.post("http://172.93.52.171:4000/api",{
+      const burnData = await axios.post("https://burn-api.vercel.app/api",{
         apiUrl: "https://metabase.constellations.zone/api/public/card/3f4acb97-796f-40ae-af2c-d3163d09667a/query"
       });
       setBurnedStargaze([...burnData.data.slice(Math.max(burnData.data.length - 6, 0))]);
       
        //distributed stargaze api call
-      const distributedCoin = await axios.post("http://172.93.52.171:4000/api",{
+      const distributedCoin = await axios.post("https://burn-api.vercel.app/api",{
         apiUrl: "https://metabase.constellations.zone/api/public/card/dfedf8e8-fd13-4cfb-9d87-e6a13ab45a7f/query"
       });
 
