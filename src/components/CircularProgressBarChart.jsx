@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { VictoryAnimation, VictoryLabel, VictoryPie } from "victory";
 
-const CircularChart = ({ value}) => {
+const CircularChart = ({ value, title }) => {
     const getData = (percent) => {
         return [{ x: 1, y: percent }, { x: 2, y: 100 - percent }];
     }
@@ -24,8 +24,9 @@ const CircularChart = ({ value}) => {
     },[ recalculatePercent ]);
 
     return ( 
-        <div>
-            <svg viewBox="0 0 400 400" width="100%" height="100%">
+        <div className="h-fit">
+        <div className="relative h-full w-full block py-2.5 px-6 border-4 border-orange shadow-card">
+            <svg viewBox="0 0 400 400" width="100%" height="100%" >
                 <VictoryPie
                     standalone={false}
                     animate={{ duration: 1000 }}
@@ -55,6 +56,8 @@ const CircularChart = ({ value}) => {
                     }}
                 </VictoryAnimation>
             </svg>
+            </div>
+            <h3 className="mx-auto capitalize mt-2 text-center">{title} </h3>
         </div>
      );
 }

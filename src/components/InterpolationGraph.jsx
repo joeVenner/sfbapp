@@ -53,7 +53,7 @@ const InterpolationGraph = ({data, title}) => {
     }
       
     return ( 
-        <div className="">
+        <div className="h-full flex flex-col justify-between">
             <div className="relative py-4 px-6 border-4 border-orange shadow-card">
                 <InterpolationSelect
                     currentValue={interpolation}
@@ -62,7 +62,7 @@ const InterpolationGraph = ({data, title}) => {
                 />
                 <input
                 type="checkbox"
-                id="polar"
+                id={title}
                 value={polar}
                 onChange={
                     (event) => {
@@ -72,7 +72,7 @@ const InterpolationGraph = ({data, title}) => {
                 }
                 style={{ marginLeft: 25, marginRight: 5 }}
                 />
-                <label htmlFor="polar">polar</label>
+                <label htmlFor={title}>polar</label>
                 <VictoryChart polar={polar} height={390}>
                     <VictoryLine
                         interpolation={interpolation} data={data}

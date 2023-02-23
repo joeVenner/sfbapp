@@ -72,7 +72,7 @@ function App() {
         </div>
 
         <div className="my-10 mx-auto grid gap-10 grid-cols-mobile auto-rows-max" aria-label='charts'>
-            <InterpolationGraph title="Burned stars per day" data={[
+            <InterpolationGraph key="burn" title="Burned stars per day" data={[
                     { x: burnedStargaze[0][0], y: burnedStargaze[0][1] },
                     { x: burnedStargaze[1][0], y: burnedStargaze[1][1] },
                     { x: burnedStargaze[2][0], y: burnedStargaze[2][1] },
@@ -81,7 +81,7 @@ function App() {
                     { x: burnedStargaze[5][0], y: burnedStargaze[5][1] }
                   ]} 
             />
-            <InterpolationGraph title="Distributed stars per day" data={[
+            <InterpolationGraph key="dist" title="Distributed stars per day" data={[
                     { x: new Date(distributedStargaze[0][0]), y: distributedStargaze[0][1] },
                     { x: new Date(distributedStargaze[1][0]), y: distributedStargaze[1][1] },
                     { x: new Date(distributedStargaze[2][0]), y: distributedStargaze[2][1] },
@@ -101,12 +101,8 @@ function App() {
             />
              */}
             
-            <div className="">
-              <div className='relative py-4 px-6 border-4 border-orange shadow-card '>
-                <CircularChart value={parseInt(burnedStargaze[5][1])} />
-              </div>
-              <h3 className="mx-auto capitalize mt-2 text-center">Daily Progress To 15k Burned Stars </h3>
-            </div>
+            <CircularChart title="Daily Progress To 15k Burned Stars" value={parseInt(burnedStargaze[5][1])} />
+              
           
 
         </div>
