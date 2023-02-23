@@ -18,12 +18,12 @@ const Navbar = () => {
                     <a href="/" className="pt-2 md:pt-0 flex items-center" ><img src="https://www.stargaze.zone/logo.svg" alt="logo" className="w-28  object-cover"   /> <h2 className="text-xl ml-0 font-bold  uppercase "></h2></a>
                 </div>
 
-                <ul className={`absolute top-[56px] left-0 right-0 md:inset-0 md:relative w-full h-[calc(100vh-56px)] md:h-auto z-30 bg-transparent self-center flex flex-col md:flex-row justify-center items-center capitalize   gap-y-5 gap-x-3 ${menuOpen? "translate-x-0 " : "-translate-x-full bg-transparent"}  md:translate-x-0 ease-in-out duration-300`} >
-                    <li className="text-lg ml-0 font-light  "><a href="https://www.stargaze.zone/launchpad" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-noir ">lanchpad</a></li>
-                    <li className="text-lg font-extralight "><a href="https://www.stargaze.zone/marketplace"onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-noir ">marketplace</a></li>
-                    <li className="text-lg font-extralight"><a href="https://www.stargaze.zone/names" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-noir">names</a></li>
-                    <li className="text-lg font-extralight"><a href="https://info.stargaze.zone" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-noir">indexer</a></li>
-                    <li className="text-lg font-extralight"><a href="https://stargaze-codes-explorer.vercel.app/#/codes" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-noir">codes</a></li>
+                <ul className={`absolute top-[56px] left-0 right-0 md:inset-0 md:relative w-full h-[calc(100vh-56px)] md:h-auto z-30 bg-white md:bg-transparent self-center flex flex-col md:flex-row justify-center items-center capitalize   gap-y-5 gap-x-3 ${menuOpen? "translate-x-0 " : "-translate-x-full bg-transparent"}  md:translate-x-0 ease-in-out duration-300`} >
+                    <li className="text-lg ml-0 font-light  "><a href="https://www.stargaze.zone/launchpad" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-blanc ">lanchpad</a></li>
+                    <li className="text-lg font-extralight "><a href="https://www.stargaze.zone/marketplace"onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-blanc ">marketplace</a></li>
+                    <li className="text-lg font-extralight"><a href="https://www.stargaze.zone/names" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-blanc">names</a></li>
+                    <li className="text-lg font-extralight"><a href="https://info.stargaze.zone" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-blanc">indexer</a></li>
+                    <li className="text-lg font-extralight"><a href="https://stargaze-codes-explorer.vercel.app/#/codes" onClick={toggleClick} className="p-2 transition duration-100 ease-in-out rounded-md hover:bg-blanc">codes</a></li>
                 </ul>
 
 
