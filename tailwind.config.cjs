@@ -18,11 +18,11 @@ module.exports = {
         jaune : "#fdf59f",
         lightBleu : "#9ef0cb",
         bleu : "#71b1e0",
-        orange : "#ff832b",
+        orange : "rgb(83, 31, 23)",
         violet : "#6C63FF",
       },
       boxShadow: {
-        'card': '-1.2rem 1.2rem 0px 0px #9ef0cb',
+        'card': '-0.5rem 0.5rem 0px 0px rgb(188 82 64)',
       },
       gridTemplateColumns: {
         'mobile': 'repeat(auto-fit,minmax(300px,1fr))',
