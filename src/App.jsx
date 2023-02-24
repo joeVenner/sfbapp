@@ -47,13 +47,12 @@ function App() {
     <div className="min-h-screen select-none font-poppins">
       <Navbar />
       {(burnedStargaze && distributedStargaze) ? 
-        (<main className="p-10 px-20 m-auto">
-          <div className=" grid gap-10 grid-cols-mobile mx-auto">
+        (<main className="p-10 lg:px-[7%] m-auto ">
+          <div className=" grid gap-10 grid-cols-mobile mx-auto place-content-center">
             <div className="flex flex-col justify-center ">
               <h2 className="font-bold text-[1.8rem] ">Stargaze Fair Burn 🔥</h2>
               <p className="">Real-time tracker of burned & distributed stars</p>
             </div>
-            <br className="block mb-10 lg:hidden" />
             {/* <CardNumber intervalduration={10000} duration={1000} increment={0.5} value={parseFloat(burnedStargaze.at(-1)[2].toFixed(2))}  /> */}
             <div className=" p-5 border-4 border-orange shadow-card flex flex-col items-center justify-center text-xl gap-3">
               <h3 className="capitalize">Total amount burned</h3>
@@ -61,11 +60,11 @@ function App() {
             </div>
             <div className="p-4 border-4 border-orange shadow-card flex flex-col items-center justify-center text-xl gap-3">
               <h3 className="capitalize">Total amount distributed</h3>
-              <span className="uppercase font-bold">{distributedStargaze.at(-1)[2].toFixed(2)} stars</span>
+              <span className="uppercase font-bold">{numberWithCommas( distributedStargaze.at(-1)[2].toFixed(2) )} stars</span>
             </div>
           </div>
 
-          <div className="my-10 mx-auto grid gap-10 grid-cols-mobile auto-rows-[1fr]" aria-label='charts'>
+          <div className="my-10 mx-auto grid gap-10 grid-cols-mobile auto-rows-[1fr] place-content-center" aria-label='charts'>
               <InterpolationGraph key="burn" title="Burned stars per day" data={[
                       { x: burnedStargaze[0][0], y: burnedStargaze[0][1] },
                       { x: burnedStargaze[1][0], y: burnedStargaze[1][1] },

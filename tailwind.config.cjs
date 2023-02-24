@@ -25,7 +25,7 @@ module.exports = {
         'card': '-0.5rem 0.5rem 0px 0px rgb(188 82 64)',
       },
       gridTemplateColumns: {
-        'mobile': 'repeat(auto-fit,minmax(300px,1fr))',
+        'mobile': 'repeat(auto-fit,minmax(300px,400px))',
       },
     },
   },
